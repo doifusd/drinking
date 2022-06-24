@@ -17,7 +17,6 @@ func main() {
 	myApp.SetIcon(img.ResourceIconPng)
 	c := cron.New(cron.WithSeconds())
 	c.AddFunc("01 30 7,9,11,13,15,17,19,21 * * *", func() {
-		// c.AddFunc("*/5 * * * * *",func(){
 		drinkImage()
 	})
 	c.Start()
